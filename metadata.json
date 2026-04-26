@@ -1,0 +1,8 @@
+{
+  "name": "Dr. Agri",
+  "description": "Your AI-powered agricultural consultant for crop diagnostics and farming advice.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

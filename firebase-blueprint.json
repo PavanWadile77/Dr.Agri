@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "Diagnosis": {
+      "title": "Diagnosis",
+      "description": "A crop diagnosis record.",
+      "type": "object",
+      "properties": {
+        "cropType": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "result": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "userId": { "type": "string" }
+      },
+      "required": ["cropType", "result", "timestamp", "userId"]
+    },
+    "Advice": {
+      "title": "Advice",
+      "description": "A farming advice chat message.",
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "response": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "userId": { "type": "string" }
+      },
+      "required": ["query", "response", "timestamp", "userId"]
+    },
+    "User": {
+      "title": "User",
+      "description": "A user profile.",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "farmerId": { "type": "string", "description": "12-digit farmer ID." },
+        "farmLocation": { "type": "string" },
+        "farmArea": { "type": "string" },
+        "farmUnit": { "type": "string", "enum": ["acre", "hectare", "guntha"] },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["displayName", "email", "farmerId"]
+    }
+  },
+  "firestore": {
+    "/diagnoses/{diagnosisId}": {
+      "schema": "Diagnosis",
+      "description": "Collection of crop diagnoses."
+    },
+    "/advice/{adviceId}": {
+      "schema": "Advice",
+      "description": "Collection of farming advice chats."
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of user profiles."
+    }
+  }
+}
