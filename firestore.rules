@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidDiagnosis(data) {
+      return data.keys().hasAll(['cropType', 'result', 'timestamp', 'userId']) &&
+             data.cropType is string &&
+             data.result is string &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidAdvice(data) {
+      return data.keys().hasAll(['query', 'response', 'timestamp', 'userId']) &&
+             data.query is string &&
+             data.response is string &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidUser(data) {
+      return data.displayName is string &&
+             data.email is string &&
+             data.farmerId is string &&
+             data.farmerId.matches('^[0-9]{12}$') &&
+             (!('farmLocation' in data) || data.farmLocation is string) &&
+             (!('farmArea' in data) || data.farmArea is string) &&
+             (!('farmUnit' in data) || data.farmUnit in ['acre', 'hectare', 'guntha']);
+    }
+
+    match /diagnoses/{diagnosisId} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isAuthenticated() && isValidDiagnosis(request.resource.data);
+    }
+
+    match /advice/{adviceId} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isAuthenticated() && isValidAdvice(request.resource.data);
+    }
+
+    match /users/{userId} {
+      allow read, write: if isOwner(userId) && (request.method == 'GET' || isValidUser(request.resource.data));
+    }
+  }
+}
