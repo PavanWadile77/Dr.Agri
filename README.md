@@ -1,41 +1,21 @@
 # Dr. Agri 🌾
 
-An AI-assisted agriculture support platform designed to help farmers access **smart farming information, crop support, market-oriented insights, and agricultural resources**.
+An **AI-assisted agriculture support platform** designed to bring smart farming information, crop guidance, location services, and digital agricultural workflows into one modern application.
 
-## Overview
-
-Dr. Agri combines a modern web interface with Firebase, maps, AI services, and agricultural workflows to create a practical digital assistant for farmers.
-
-## ✨ Features
-
-- Farmer-focused dashboard
-- Agricultural support workflows
+## 🚀 What It Provides
+- Farmer-focused dashboard and workflows
 - AI-assisted agricultural information
-- Location and map integration
 - Crop and farming guidance
-- QR-code support
+- Map and location integration
 - Firebase authentication and data services
+- QR-code capabilities
 - Responsive interface
-- Markdown-based content support
+- Markdown-based content
 
-## 🛠 Tech Stack
-
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- Firebase
-- Google Gemini API
-- Axios
-- Leaflet / React Leaflet
-- Google Maps integration
-- React Markdown
-- QRCode React
-- Lucide React
-- Motion
+## 🛠️ Tech Stack
+**React 19 · TypeScript · Vite · Tailwind CSS · Firebase · Google Gemini · Axios · Leaflet · Google Maps · React Markdown · QRCode React · Motion**
 
 ## ▶️ Run Locally
-
 ```bash
 git clone https://github.com/PavanWadile77/Dr.Agri.git
 cd Dr.Agri
@@ -43,39 +23,20 @@ npm install
 npm run dev
 ```
 
-Production build:
-
+Build:
 ```bash
 npm run build
 npm run preview
 ```
 
-Type-check:
-
-```bash
-npm run lint
-```
-
 ## 🔐 Configuration
-
-Create your local environment file from the provided example:
-
-```bash
-cp .env.example .env
-```
-
-Configure Firebase, AI, maps, and other required service values according to the project configuration.
-
-Never commit API keys or private credentials.
+Configure Firebase, Gemini, maps, and other service credentials through local environment files. Never expose private keys.
 
 ## 🏆 Project Context
+Developed as an agriculture-focused software project and used in hackathon/project work.
 
-Dr. Agri was developed as an agriculture-focused software project and has been associated with hackathon/project work by **Pavan Wadile**.
+## 🔗 Project
+[GitHub Repository](https://github.com/PavanWadile77/Dr.Agri)
 
-## Repository
-
-https://github.com/PavanWadile77/Dr.Agri
-
-## Author
-
+## 👨‍💻 Author
 **Pavan Wadile**
