@@ -1,5 +1,14 @@
 # Dr. Agri 🌾
 
+<div align="center">
+
+**AgriTech • AI-Assisted Web**
+
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+
+</div>
+
+
 An **AI-assisted agriculture support platform** designed to bring smart farming information, crop guidance, location services, and digital agricultural workflows into one modern application.
 
 ## 🚀 What It Provides
@@ -40,3 +49,19 @@ Developed as an agriculture-focused software project and used in hackathon/proje
 
 ## 👨‍💻 Author
 **Pavan Wadile**
+
+
+## 🔧 Engineering Focus
+
+Agricultural guidance, AI assistance, maps, Firebase services and QR capabilities.
+
+
+---
+
+<div align="center">
+
+**Pavan Wadile · B.Tech Information Technology**
+
+[GitHub](https://github.com/PavanWadile77)
+
+</div>
