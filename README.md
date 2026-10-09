@@ -2,6 +2,13 @@
 
 <div align="center">
 
+<img src="https://komarev.com/ghpvc/?username=PavanWadile77&label=PROFILE+VIEWS&color=2563EB&style=for-the-badge" alt="Profile views" />
+
+</div>
+
+
+<div align="center">
+
 **AgriTech • AI-Assisted Web**
 
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
